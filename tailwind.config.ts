@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+
 export default {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -8,6 +9,13 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+          parallax: 'url("../public/parallax2.jpg")',
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      sans: ['Helvetica', 'Arial', 'sans-serif'], // Add Helvetica here
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
