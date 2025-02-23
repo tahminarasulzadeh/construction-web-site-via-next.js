@@ -18,7 +18,7 @@ export default function ServicesPage() {
 
                     <p className='w-[250px] h-[120px] mt-3 text-[#3B3A3A] text-[14px] leading-[24px] font-sans font-normal tracking-wider' >
                         I'm a paragraph. Click here to add
-                        your own text and edit me. It’s easy.
+                        your own text and edit me. It&apos; s easy.
                         Just click “Edit Text” or double click
                         me to add your own content and
                         make changes to the font.
@@ -34,7 +34,7 @@ export default function ServicesPage() {
 
                     <p className='w-[250px] h-[120px] mt-3 text-[#3B3A3A] text-[14px] leading-[24px] font-sans font-normal tracking-wider' >
                         I'm a paragraph. Click here to add
-                        your own text and edit me. It’s easy.
+                        your own text and edit me. It&apos;s easy.
                         Just click “Edit Text” or double click
                         me to add your own content and
                         make changes to the font.
@@ -49,7 +49,7 @@ export default function ServicesPage() {
 
                     <p className='w-[250px] h-[120px] mt-3 text-[#3B3A3A] text-[14px] leading-[24px] font-sans font-normal tracking-wider' >
                         I'm a paragraph. Click here to add
-                        your own text and edit me. It’s easy.
+                        your own text and edit me. It&apos;s easy.
                         Just click “Edit Text” or double click
                         me to add your own content and
                         make changes to the font.

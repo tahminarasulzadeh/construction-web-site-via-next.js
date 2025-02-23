@@ -1,7 +1,4 @@
 
-import Image from "next/image"
-import aboutImg from '../../../public/pexels-500photos-com-15338-93400.jpg'
-
 export default function AboutPage() {
 
     return <div className="flex flex-col">

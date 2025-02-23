@@ -12,12 +12,7 @@ interface ImageSet {
     img3_: string;
 }
 
-interface Project {
-    id: string;
-    name: string;
-    info: string;
-    images: ImageSet[];
-}
+
 
 export default function ProjectDetailsPage({ params }: { params: Promise<{ projectId: string }> }) {
     const { projectId } = React.use(params); // Unwrap the params promise
@@ -40,7 +35,7 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ proje
         }, 3000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, []); // Ensure this runs only once when the component mounts
 
     const currentImageSet = project.images[0];
     const imageKeys: Array<keyof ImageSet> = ['img1_', 'img2_', 'img3_'];
