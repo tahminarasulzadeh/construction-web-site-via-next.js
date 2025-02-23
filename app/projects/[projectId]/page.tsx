@@ -12,32 +12,33 @@ interface ImageSet {
     img3_: string;
 }
 
-
-
 export default function ProjectDetailsPage({ params }: { params: Promise<{ projectId: string }> }) {
     const { projectId } = React.use(params); // Unwrap the params promise
 
-    const project = projectsData.find((p) => p.id.toString() === projectId);
-
-    if (!project) {
-        return <h1 className="text-red-700 z-50 text-center mt-[255px]">Project not found</h1>;
-    }
-
-    if (!project.images || project.images.length === 0) {
-        return <h1 className="text-red-700 z-50 text-center mt-[255px]">No images available</h1>;
-    }
-
+    // Hooks are always called at the top level
     const [currentIndex, setCurrentIndex] = useState(0);
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % 3); // Change every 3 seconds
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % 3);
         }, 3000);
 
         return () => clearInterval(interval);
-    }, []); // Ensure this runs only once when the component mounts
+    }, []);
 
-    const currentImageSet = project.images[0];
+    const project = projectsData.find((p) => p.id.toString() === projectId);
+
+    // Handle project or image conditions in JSX, not before hooks
+    if (!project) {
+        return <h1 className="text-red-700 z-50 text-center mt-[255px]">Project not found</h1>;
+    }
+
+    const currentImageSet = project.images && project.images.length > 0 ? project.images[0] : null;
+
+    if (!currentImageSet) {
+        return <h1 className="text-red-700 z-50 text-center mt-[255px]">No images available</h1>;
+    }
+
     const imageKeys: Array<keyof ImageSet> = ['img1_', 'img2_', 'img3_'];
     const currentImageKey = imageKeys[currentIndex];
     const currentImage = currentImageSet[currentImageKey] || '/fallback-image.png';
@@ -56,10 +57,14 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ proje
                         {project.info}
                     </p>
 
-                    <Link href="/" className=" p-3 bg-[#211f15] mt-20 text-[#EDCD1D] font-sans font-normal transition-all cursor-pointer duration-500 ease-in-out hover:bg-[#EDCD1D] hover:text-[#211f15] " >BACK TO PROJECTS</Link>
-
+                    <Link
+                        href="/"
+                        className="p-3 bg-[#211f15] mt-20 text-[#EDCD1D] font-sans font-normal transition-all cursor-pointer duration-500 ease-in-out hover:bg-[#EDCD1D] hover:text-[#211f15]"
+                    >
+                        BACK TO PROJECTS
+                    </Link>
                 </div>
-                <div  className="flex items-center w-full md:w-[600px] overflow-x-auto scrollbar-hide">
+                <div className="flex items-center w-full md:w-[600px] overflow-x-auto scrollbar-hide">
                     <div className="flex items-center w-full md:w-[600px] overflow-x-auto justify-center">
                         <Image
                             key={currentIndex}
@@ -70,7 +75,6 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ proje
                             height={400}
                         />
                     </div>
-
                 </div>
             </div>
         </div>

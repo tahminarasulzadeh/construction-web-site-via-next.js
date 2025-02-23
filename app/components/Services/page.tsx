@@ -17,7 +17,7 @@ export default function ServicesPage() {
                     <p className='font-sans text-[#3D5975] text-[22px] leading-[26px] font-bold tracking-wider '>Preconstruction <br /> Planning</p>
 
                     <p className='w-[250px] h-[120px] mt-3 text-[#3B3A3A] text-[14px] leading-[24px] font-sans font-normal tracking-wider' >
-                        I'm a paragraph. Click here to add
+                        I&apos;m a paragraph. Click here to add
                         your own text and edit me. It&apos; s easy.
                         Just click “Edit Text” or double click
                         me to add your own content and
@@ -33,7 +33,7 @@ export default function ServicesPage() {
                     <p className='font-montserrat text-[#3D5975] text-[22px] leading-[26px] font-bold tracking-wider '>Architectural  <br /> Modelling</p>
 
                     <p className='w-[250px] h-[120px] mt-3 text-[#3B3A3A] text-[14px] leading-[24px] font-sans font-normal tracking-wider' >
-                        I'm a paragraph. Click here to add
+                        I&apos;m a paragraph. Click here to add
                         your own text and edit me. It&apos;s easy.
                         Just click “Edit Text” or double click
                         me to add your own content and
@@ -48,7 +48,7 @@ export default function ServicesPage() {
                     <p className='font-montserrat text-[#3D5975] text-[22px] leading-[26px] font-bold tracking-wider '>Construction  <br /> Management</p>
 
                     <p className='w-[250px] h-[120px] mt-3 text-[#3B3A3A] text-[14px] leading-[24px] font-sans font-normal tracking-wider' >
-                        I'm a paragraph. Click here to add
+                        I&apos;m a paragraph. Click here to add
                         your own text and edit me. It&apos;s easy.
                         Just click “Edit Text” or double click
                         me to add your own content and
