@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderPage from "./components/Header/page";
+import Copyright from "./components/Copyright/page";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <HeaderPage/>
         {children}
+        <Copyright />
       </body>
     </html>
   );

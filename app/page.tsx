@@ -1,31 +1,32 @@
-
 'use client'
 import { useEffect, useState } from 'react';
 import { IoIosArrowDown } from "react-icons/io";
-import Link from "next/link";
-
 import ServicesPage from "./components/Services/page";
 import AboutPage from "./components/About/page";
 import ProjectsPage from "./projects/page";
 import Clients from './components/Clients/page';
 import Contact from './components/Contact/page';
-import Copyright from './components/Copyright/page';
-
-
+import Copyright from './components/Copyright/page'
 
 export default function Home() {
-
   const [scrollY, setScrollY] = useState(0);
 
-   useEffect(() => {
+  useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handleScrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="w-full pt-28 h-full">
-      <div className="relative w-full h-screen overflow-hidden">
+    <div className="w-full pt-28 h-full scroll-smooth">
+      <div id="home" className="relative w-full h-screen overflow-hidden">
         {/* Video Background */}
         <video
           autoPlay
@@ -43,25 +44,38 @@ export default function Home() {
 
         {/* Content on top of the video */}
         <div className="relative z-10 flex flex-col mt-20 items-center h-full">
-          <p className="text-center font-sans text-white text-[48px] leading-[65px] font-[600] tracking-wide">
+          <p className="text-center font-sans text-white  text-[24px] leading:[32px] xl:text-[48px] xl:leading-[65px] font-[600] tracking-wide">
             LEADERS IN QUALITY <br /> CONSTRUCTION AND <br /> INFRASTRUCTURE
           </p>
-          <Link className="mt-2" href="/#services">
-            <IoIosArrowDown className="text-white text-[58px]" />
-          </Link>
+          <button
+            onClick={handleScrollToServices}
+            className="mt-2"
+          >
+            <IoIosArrowDown className="text-white text-[25px] xl:text-[58px] cursor-pointer" />
+          </button>
         </div>
 
         {/* Overlay to make text more readable */}
         <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 z-0"></div>
       </div>
 
-      <ServicesPage />
-      <AboutPage />
-      <ProjectsPage />
-      <Clients />
-      <Contact />
-      <Copyright />
-    </div>
+      {/* Add an ID to the Services section for targeting */}
+      <div id="services">
+        <ServicesPage />
+      </div>
+      <div id='about'>
+        <AboutPage />
+      </div>
+      <div id='projects'>
+        <ProjectsPage />
+      </div>
 
+      <Clients />
+      <div id='contact'>
+        <Contact />
+      </div>
+
+     
+    </div>
   );
 }

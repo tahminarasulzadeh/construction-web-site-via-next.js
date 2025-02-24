@@ -29,10 +29,10 @@ export default function ProjectsPage() {
             )
         );
     };
-    return <div className="p-5">
-        <div className="flex justify-center flex-col items-center">
-            <p className="text-center font-bold leading-[64.48px] tracking-normal text-[53.28px] font-sans text-[#1E2D3B] mt-10">PROJECTS</p>
-            <div className="w-[116px] mt-1 flex h-[10px] bg-[#EDCD1F]"></div>
+    return <div className="px-5  pb-5 pt-28 ">
+        <div className="flex lg:justify-center lg:items-center justify-start flex-col items-start">
+            <p className="text-start font-bold  text-[25px] leading-[32px] lg:leading-[64.48px] tracking-normal lg:text-[53.28px] font-sans text-[#1E2D3B] mt-10">PROJECTS</p>
+            <div className="w-[116px] mt-2 flex h-[10px] bg-[#EDCD1F]"></div>
 
             <div className="flex flex-col gap-10 mt-10 pt-5 justify-center items-center">
                 <div className="flex justify-center gap-[20px]">

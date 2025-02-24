@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-          parallax: 'url("../public/parallax2.jpg")',
+          parallax: 'url("../public/parallax3.jpg")',
       },
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],

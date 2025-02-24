@@ -5,11 +5,14 @@ import constManagement from '../../../public/wow-image → 9e456adff0ee4a2c847cf
 import Image from 'next/image'
 
 export default function ServicesPage() {
-    return <div id="services" className="flex flex-col justify-center p-20  items-center">
-        <p className="text-center font-sans font-bold text-[#1E2D3B] text-[54.03px] leading-[65.39px] mt-[50px] tracking-wider">SERVICES</p>
+    return <div  className="flex flex-col  pb-5 pt-28 py-5 ">
+        <div className='flex  justify-start items-start   md:justify-center md:items-center  flex-col'>
+        <p className=" lg:text-center text:start font-sans font-bold text-[#1E2D3B] text-[32px] md:text-[54.03px]  lg:leading-[65.39px] mt-[50px] tracking-wider">SERVICES</p>
         <div className="w-[116px] h-[10px] bg-[#EDCD1F]"></div>
+        </div>
+    
 
-        <div className="flex justify-center gap-[50px] mt-10 items-center">
+        <div className="flex  lg:flex-row md:justify-center   justify-start flex-col gap-[50px] mt-10 md:items-center ">
 
             <div className='flex flex-col'>
                 <Image src={preConstImg} alt="Preconstruction Planning" />

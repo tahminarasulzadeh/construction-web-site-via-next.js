@@ -107,7 +107,7 @@ export default function ContactForm() {
           type="text"
           id="firstName"
           ref={nameInputRef}
-          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 w-[405px] h-[45px] border-[#757575]"
+          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 lg:w-[405px] w-[350]  h-[45px] border-[#757575]"
         />
 
         {/* Last Name */}
@@ -121,7 +121,7 @@ export default function ContactForm() {
           type="text"
           id="lastName"
           ref={lastNameInputRef}
-          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 w-[405px] h-[45px] border-[#757575]"
+          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 lg:w-[405px] w-[350]  h-[45px] border-[#757575]"
         />
 
         {/* Email */}
@@ -135,7 +135,7 @@ export default function ContactForm() {
           type="email"
           id="email"
           ref={emailInputRef}
-          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 w-[405px] h-[45px] border-[#757575]"
+          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 lg:w-[405px] w-[350]  h-[45px] border-[#757575]"
         />
 
         {/* Subject */}
@@ -149,7 +149,7 @@ export default function ContactForm() {
           type="text"
           id="theme"
           ref={subjectInputRef}
-          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 w-[405px] h-[45px] border-[#757575]"
+          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] px-3 mt-2 lg:w-[405px] w-[350]  h-[45px] border-[#757575]"
         />
 
         {/* Message */}
@@ -164,7 +164,7 @@ export default function ContactForm() {
           name="message"
           ref={messageRef}
           placeholder="Write your message here..."
-          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] p-5 mt-2 w-[405px] h-[105px] border-[#757575]"
+          className="bg-gray-100 border-solid transition-all cursor-pointer duration-500 ease-in-out focus:outline-none hover:bg-[#C6C6C6] border-[1px] p-5 mt-2 lg:w-[405px] w-[350]  h-[105px] border-[#757575]"
         ></textarea>
 
         {/* Submit Button */}
