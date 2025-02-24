@@ -1,7 +1,5 @@
-
-
 'use client';
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import Logo from "../Logo/page";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -9,7 +7,6 @@ import { RxHamburgerMenu } from "react-icons/rx";
 export default function HeaderPage() {
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const [active, setActive] = useState("HOME"); // Default active item
-    const [scrollY, setScrollY] = useState(0); // Track scroll position
 
     const menuItems = [
         { name: "HOME", link: "/" },
@@ -18,14 +15,6 @@ export default function HeaderPage() {
         { name: "PROJECTS", link: "/projects" },
         { name: "CONTACT", link: "/#contact" },
     ];
-
-    // Track scroll position
-    useEffect(() => {
-        const handleScroll = () => setScrollY(window.scrollY);
-        window.addEventListener("scroll", handleScroll);
-
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     return (
         <div className={`fixed top-0 w-full z-50 bg-[#EDCD1D] transition-colors`}>

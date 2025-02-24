@@ -6,7 +6,7 @@ import AboutPage from "./components/About/page";
 import ProjectsPage from "./projects/page";
 import Clients from './components/Clients/page';
 import Contact from './components/Contact/page';
-import Copyright from './components/Copyright/page'
+
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
