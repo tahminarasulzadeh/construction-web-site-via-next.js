@@ -54,7 +54,7 @@ export default function ProjectDetailsPage({ params }: { params: Promise<{ proje
                     <div className="bg-[#EDCD1D] w-[130px] h-[10px]"></div>
                 </div>
                 <div className="flex flex-wrap gap-[20px] mt-16 justify-start pl-10 xl:pl-0 md:justify-center">
-                    <div className="w-[350px]  md:w-[505px] h-full">
+                    <div className="w-[305px]  px-3 md:w-[505px] h-full">
                         <p className="font-sans font-normal tracking-normal mb-[30px]  text-[14px]  lg:text-[17px] text-[#979494] leading:[17px] lg:leading-[28.9px]">
                             {project.info} 
                         </p>

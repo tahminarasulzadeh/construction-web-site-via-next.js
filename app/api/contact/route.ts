@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     const { name, lastName, email, subject, message } = body;
 
     // Validation
-    if (!name || !lastName || !email || !subject || !message) {
+    if (!name || !lastName || !email || !subject) {
       return NextResponse.json(
         { error: 'All fields are required.' },
         { status: 422 }
