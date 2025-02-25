@@ -32,7 +32,7 @@ export default function Contact() {
                     <p className="text-[25px] font-sans font-bold leading-normal text-[#1e2d3b]">Employment</p>
                     <p className="text-[17px] text-[#6b6969] font-[400] tracking-normal mt-3 leading-[25.5px] font-sans w-[250px] h-[120px] xl:w-[338.45px] xl:h-[77px]">To apply for a job with Sphere Constuctions, please send a cover letter together with your C.V. to: info@mysite.com</p>
                     <div className="w-[64px] mt-2 h-[10px] bg-[#EDCD1F]"></div>
-                    <p className="text-[#1E2D3B]  font-bold font-sans  mt-5 leading-normal tracking-normal text-[25px]">Get a quote: <span>123-456-7890</span></p>
+                    <p className="text-[#1E2D3B]  font-bold font-sans   mt-5 leading-normal tracking-normal text-[25px]">Get a quote: <span>123-456-7890</span></p>
                 </div>
 
             </div>
