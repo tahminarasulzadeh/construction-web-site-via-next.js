@@ -45,7 +45,7 @@ export default function HeaderPage() {
             </div>
 
             {/* Mobile Navigation */}
-            <div className="xl:hidden flex w-full sm:justify-start sm:gap-[50px] md:justify-between items-center p-4">
+            <div className="xl:hidden flex w-full  justify-between items-center p-4">
                 <Logo />
                 <RxHamburgerMenu
                     className="text-[45px] cursor-pointer"
